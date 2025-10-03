@@ -1,20 +1,14 @@
 // src/app/layout.tsx
-import type { Metadata } from 'next';
-import ThemeProvider from '@/components/theme-provider';
+import './globals.css';
+import { Inter } from 'next/font/google';
+import type { ReactNode } from 'react';
 
-export const metadata: Metadata = {
-    title: 'TuranPayments — Crypto payment gateway',
-    description: 'Accept crypto via invoices, buttons, widgets and API.'
-};
+const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
     return (
-        <html lang="en">
-        <body>
-        <ThemeProvider>
-            {children}
-        </ThemeProvider>
-        </body>
+        <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>{children}</body>
         </html>
     );
 }
