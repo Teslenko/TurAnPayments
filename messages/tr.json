@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "TurAnPayments"
+  },
+  "navbar": {
+    "products": "Ürünler",
+    "solutions": "Çözümler",
+    "currencies": "Para Birimleri",
+    "docs": "Belgeler",
+    "help": "Yardım",
+    "dashboard": "Kontrol Paneli",
+    "payments": "Ödemeler",
+    "invoices": "Faturalar",
+    "payouts": "Ödemeler",
+    "webhooks": "Webhooks"
+  },
+  "buttons": {
+    "connect": "Bağlan",
+    "docs": "Dokümantasyon"
+  },
+  "hero": {
+    "badge": "⚡ Saklama Yok · ⚡ Webhooks · 🧩 Eklentiler",
+    "title": "Kripto ödemeleri kabul etmeye başlayın",
+    "subtitle": "Faturalar, butonlar, widget’lar ve API. Müşteriler BTC, ETH, USDT ve daha fazlasıyla ödeme yapabilir."
+  },
+  "auth": {
+    "signIn": "Giriş yap",
+    "signUp": "Kayıt ol",
+    "getStarted": "Başla",
+    "signInTitle": "Giriş yap",
+    "signUpTitle": "Hesap oluştur",
+    "welcomeBack": "Tekrar hoş geldiniz! Bilgilerinizi girin.",
+    "createAccount": "Ticari hesabınızı oluşturun.",
+    "email": "E-posta",
+    "password": "Şifre",
+    "company": "Şirket (opsiyonel)",
+    "forgot": "Şifremi unuttum?",
+    "loading": "Yükleniyor...",
+    "noAccount": "Hesabınız yok mu?",
+    "createOne": "Oluşturun",
+    "haveAccount": "Zaten hesabınız var mı?",
+    "resetTitle": "Şifreyi sıfırla",
+    "resetDesc": "Size sıfırlama bağlantısını e-posta ile göndereceğiz.",
+    "sendLink": "Sıfırlama bağlantısı gönder",
+    "resetSent": "Bu e-posta kayıtlıysa, sıfırlama bağlantısını gönderdik.",
+    "backToSignIn": "Girişe dön"
+  },
+  "solutions": {
+    "ecommerce": "E-ticaret için",
+    "token": "Token üretimi için",
+    "casinos": "Kumarhaneler için",
+    "marketplace": "Pazar yerleri için",
+    "gaming": "Oyun için",
+    "saas": "SaaS ve web için",
+    "adult": "Yetişkin platformları için",
+    "individuals": "Bireyler için",
+    "trading": "Ticaret platformları için",
+    "charity": "Hayır işleri için"
+  }
+
+}

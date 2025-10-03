@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: 24 24 27;
+  --brand-acc: 59 130 246;
+  --muted: 113 113 122;
+}
+html, body { height: 100%; }
+a { @apply hover:underline underline-offset-4; }
+
+.bg-blob {
+  background: radial-gradient(60% 60% at 20% 10%, rgba(59,130,246,.15), transparent 60%),
+              radial-gradient(60% 60% at 90% 10%, rgba(99,102,241,.12), transparent 60%),
+              radial-gradient(60% 60% at 50% 90%, rgba(16,185,129,.10), transparent 60%);
+}
+
+.card { @apply rounded-2xl border bg-white shadow-sm hover:shadow-md transition-shadow; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium; }
+.btn-primary { @apply bg-black text-white hover:bg-zinc-800; }
+.btn-outline { @apply border hover:bg-zinc-50; }
+
+.badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium; }
+.badge-green  { @apply bg-green-100  text-green-700; }
+.badge-yellow { @apply bg-yellow-100 text-yellow-700; }
+.badge-red    { @apply bg-rose-100   text-rose-700; }

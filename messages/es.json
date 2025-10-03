@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "TurAnPayments"
+  },
+  "navbar": {
+    "products": "Productos",
+    "solutions": "Soluciones",
+    "currencies": "Monedas",
+    "docs": "Documentos",
+    "help": "Ayuda",
+    "dashboard": "Panel",
+    "payments": "Pagos",
+    "invoices": "Facturas",
+    "payouts": "Retiros",
+    "webhooks": "Webhooks"
+  },
+  "buttons": {
+    "connect": "Conectar",
+    "docs": "Documentación"
+  },
+  "hero": {
+    "badge": "⚡ Sin custodia · ⚡ Webhooks · 🧩 Plugins",
+    "title": "Comienza a aceptar pagos en criptomonedas",
+    "subtitle": "Facturas, botones, widgets y API. Los clientes pueden pagar en BTC, ETH, USDT y más."
+  },
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "getStarted": "Comenzar",
+    "signInTitle": "Iniciar sesión",
+    "signUpTitle": "Crear cuenta",
+    "welcomeBack": "¡Bienvenido de nuevo! Ingrese sus credenciales.",
+    "createAccount": "Cree su cuenta de comerciante.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "company": "Empresa (opcional)",
+    "forgot": "¿Olvidó su contraseña?",
+    "loading": "Cargando...",
+    "noAccount": "¿No tienes cuenta?",
+    "createOne": "Crea una",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "resetTitle": "Restablecer contraseña",
+    "resetDesc": "Le enviaremos un enlace de restablecimiento por correo electrónico.",
+    "sendLink": "Enviar enlace",
+    "resetSent": "Si este correo existe, hemos enviado el enlace de restablecimiento.",
+    "backToSignIn": "Volver a iniciar sesión"
+  },
+  "solutions": {
+    "ecommerce": "Para e-commerce",
+    "token": "Para la generación de tokens",
+    "casinos": "Para casinos",
+    "marketplace": "Para marketplaces",
+    "gaming": "Para juegos",
+    "saas": "Para SaaS y web",
+    "adult": "Para plataformas de adultos",
+    "individuals": "Para particulares",
+    "trading": "Para plataformas de trading",
+    "charity": "Para caridad"
+  }
+
+}

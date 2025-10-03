@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Светлая тема */
+:root {
+    --bg: 255 255 255;         /* белый */
+    --fg: 17 24 39;            /* zinc-900 */
+    --muted: 113 113 122;      /* zinc-500 */
+    --card: 246 246 247;       /* zinc-100 */
+    --btn: 17 24 39;
+    --btn-fg: 255 255 255;
+}
+
+/* Тёмная тема */
+.dark {
+    --bg: 9 9 11;              /* zinc-950 */
+    --fg: 244 244 245;         /* zinc-100 */
+    --muted: 161 161 170;      /* zinc-400 */
+    --card: 24 24 27;          /* zinc-900 */
+    --btn: 244 244 245;
+    --btn-fg: 10 10 11;
+}
+
+/* Базовые токены */
+body {
+    @apply bg-[rgb(var(--bg))] text-[rgb(var(--fg))];
+}
+.card {
+    @apply rounded-2xl shadow-sm bg-[rgb(var(--card))];
+}
+.btn {
+    @apply inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition;
+}
+.btn-primary {
+    background: rgb(var(--btn));
+    color: rgb(var(--btn-fg));
+}
+.btn-outline {
+    @apply border border-zinc-200 dark:border-zinc-800 dark:border-zinc-700;
+}

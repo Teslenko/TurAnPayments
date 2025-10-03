@@ -1,0 +1,62 @@
+{
+  "brand": {
+    "name": "TurAnPayments"
+  },
+  "navbar": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "currencies": "Currencies",
+    "docs": "Docs",
+    "help": "Help",
+    "dashboard": "Dashboard",
+    "payments": "Payments",
+    "invoices": "Invoices",
+    "payouts": "Payouts",
+    "webhooks": "Webhooks"
+  },
+  "buttons": {
+    "connect": "Connect",
+    "docs": "Documentation"
+  },
+  "hero": {
+    "title": "Start accepting crypto payments",
+    "subtitle": "Invoices, buttons, widgets and API. Clients can pay in BTC, ETH, USDT and more."
+  },
+  "brand": {
+    "name": "TuranPayments"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "getStarted": "Get started",
+    "signInTitle": "Sign in",
+    "signUpTitle": "Create account",
+    "welcomeBack": "Welcome back! Enter your credentials.",
+    "createAccount": "Create your merchant account.",
+    "email": "Email",
+    "password": "Password",
+    "company": "Company (optional)",
+    "forgot": "Forgot password?",
+    "loading": "Loading...",
+    "noAccount": "Don’t have an account?",
+    "createOne": "Create one",
+    "haveAccount": "Already have an account?",
+    "resetTitle": "Reset password",
+    "resetDesc": "We’ll email you a reset link.",
+    "sendLink": "Send reset link",
+    "resetSent": "If this email exists, we’ve sent the reset link.",
+    "backToSignIn": "Back to sign in"
+  },
+  "solutions": {
+    "ecommerce": "For e-commerce",
+    "token": "For Token Generation",
+    "casinos": "For Casinos",
+    "marketplace": "For Marketplace",
+    "gaming": "For Gaming",
+    "saas": "For SaaS & Web",
+    "adult": "For Adult Platforms",
+    "individuals": "For Individuals",
+    "trading": "For Trading Platforms",
+    "charity": "For Charity"
+  }
+}

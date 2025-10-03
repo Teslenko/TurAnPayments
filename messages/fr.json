@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "TurAnPayments"
+  },
+  "navbar": {
+    "products": "Produits",
+    "solutions": "Solutions",
+    "currencies": "Devises",
+    "docs": "Documents",
+    "help": "Aide",
+    "dashboard": "Tableau de bord",
+    "payments": "Paiements",
+    "invoices": "Factures",
+    "payouts": "Versements",
+    "webhooks": "Webhooks"
+  },
+  "buttons": {
+    "connect": "Connecter",
+    "docs": "Documentation"
+  },
+  "hero": {
+    "badge": "⚡ Sans garde · ⚡ Webhooks · 🧩 Plugins",
+    "title": "Commencez à accepter les paiements crypto",
+    "subtitle": "Factures, boutons, widgets et API. Les clients peuvent payer en BTC, ETH, USDT et plus."
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S’inscrire",
+    "getStarted": "Commencer",
+    "signInTitle": "Connexion",
+    "signUpTitle": "Créer un compte",
+    "welcomeBack": "Bon retour ! Entrez vos identifiants.",
+    "createAccount": "Créez votre compte marchand.",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "company": "Entreprise (optionnel)",
+    "forgot": "Mot de passe oublié ?",
+    "loading": "Chargement...",
+    "noAccount": "Pas de compte ?",
+    "createOne": "Créer",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "resetTitle": "Réinitialiser le mot de passe",
+    "resetDesc": "Nous vous enverrons un lien de réinitialisation par e-mail.",
+    "sendLink": "Envoyer le lien",
+    "resetSent": "Si cet e-mail existe, nous avons envoyé le lien de réinitialisation.",
+    "backToSignIn": "Retour à la connexion"
+  },
+  "solutions": {
+    "ecommerce": "Pour l’e-commerce",
+    "token": "Pour la génération de tokens",
+    "casinos": "Pour les casinos",
+    "marketplace": "Pour les marketplaces",
+    "gaming": "Pour le gaming",
+    "saas": "Pour le SaaS et le web",
+    "adult": "Pour les plateformes adultes",
+    "individuals": "Pour les particuliers",
+    "trading": "Pour les plateformes de trading",
+    "charity": "Pour la charité"
+  }
+
+}
