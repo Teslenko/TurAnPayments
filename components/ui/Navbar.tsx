@@ -11,17 +11,17 @@ export function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">CP</span>
             </div>
-            <span className="text-text font-semibold text-lg">Crypto Gateway</span>
+            <span className="text-gray-900 dark:text-text font-semibold text-lg">Crypto Gateway</span>
           </Link>
           
           <div className="flex items-center space-x-4">
             <Link href="/">
-              <Button variant="ghost" className="btn-ghost btn-sm">
+              <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
                 Home
               </Button>
             </Link>
             <Link href="/dashboard">
-              <Button variant="ghost" className="btn-ghost btn-sm">
+              <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
                 Dashboard
               </Button>
             </Link>

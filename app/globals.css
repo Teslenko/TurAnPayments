@@ -149,6 +149,16 @@
     @apply btn text-text bg-transparent hover:bg-card/60 border border-transparent;
   }
   
+  /* Светлая тема - убеждаемся что кнопки ghost имеют темный текст */
+  .light .btn-ghost {
+    @apply text-gray-900 hover:text-gray-900;
+  }
+  
+  /* Светлая тема - убеждаемся что текст в навбаре темный */
+  .light .text-text {
+    @apply text-gray-900;
+  }
+  
   .btn-sm { 
     @apply px-3 py-1.5 text-sm; 
   }

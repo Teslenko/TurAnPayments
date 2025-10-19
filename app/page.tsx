@@ -15,12 +15,12 @@ export default function HomePage() {
         
         <div className="flex gap-6 justify-center mb-16">
           <Link href="/payments/new">
-            <Button className="btn-primary btn-lg">
+            <Button className="btn-primary btn-lg min-w-[160px]">
               Create Payment
             </Button>
           </Link>
           <Link href="/dashboard">
-            <Button className="btn-secondary btn-lg">
+            <Button className="btn-secondary btn-lg min-w-[160px]">
               Dashboard
             </Button>
           </Link>
