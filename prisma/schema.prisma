@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Payment {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  asset          String   // "ETH" | "USDT"
+  chain          String   // "ethereum" | "polygon" | "bsc"
+  amount         Decimal
+  fiatCurrency   String   // "USD"
+  fiatRate       Decimal  // rate на момент создания (для справки)
+  feePct         Decimal  // скопировано из env
+  derivedIndex   Int      // индекс HD-деривации
+  payAddress     String
+  tokenAddress   String?  // если USDT
+  expiresAt      DateTime?
+  status         String   // NEW | PENDING | PAID | EXPIRED | CANCELED
+  txHash         String?  // основной подтвержденный tx
+  confirmations  Int?     // достигнутое число подтверждений
+  networkTxUrl   String?  // ссылка в эксплорере
+  note           String?
+
+  // логи и инкассации (на будущее)
+  logs           WebhookLog[]
+}
+
+model WebhookLog {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  event     String
+  payload   Json
+  paymentId String?
+  payment   Payment? @relation(fields: [paymentId], references: [id])
+}
