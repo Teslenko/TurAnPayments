@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 
@@ -12,6 +12,27 @@ interface WalletConnectModalProps {
 export function WalletConnectModal({ isOpen, onClose }: WalletConnectModalProps) {
   const [selectedWallet, setSelectedWallet] = useState<string | null>(null);
 
+  // Handle Escape key to close modal
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
+
+  // Don't render anything if modal is not open
   if (!isOpen) return null;
 
   const wallets = [
@@ -73,6 +94,7 @@ export function WalletConnectModal({ isOpen, onClose }: WalletConnectModalProps)
             size="sm"
             onClick={onClose}
             className="text-muted hover:text-text"
+            aria-label="Close modal"
           >
             ✕
           </Button>
