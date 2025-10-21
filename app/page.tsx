@@ -20,9 +20,9 @@ export default function HomePage() {
               Create Payment
             </Button>
           </Link>
-          <Link href="/dashboard">
+          <Link href="/profile">
             <Button className="btn-secondary btn-lg min-w-[160px]">
-              Dashboard
+              Мой кабинет
             </Button>
           </Link>
           <Link href="/how-to-pay">

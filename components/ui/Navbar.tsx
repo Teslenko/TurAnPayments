@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { WalletConnectModal } from '@/components/ui/WalletConnectModal';
 
 export function Navbar() {
+  const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
+
   return (
     <nav className="sticky top-0 z-40 bg-card/70 border-b border-border backdrop-blur-md">
       <div className="container">
@@ -25,11 +29,23 @@ export function Navbar() {
                 Как оплачивать
               </Button>
             </Link>
-            <Link href="/dashboard">
+            <Link href="/profile">
               <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
-                Dashboard
+                Мой кабинет
               </Button>
             </Link>
+            <Link href="/dashboard">
+              <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
+                Мои платежи
+              </Button>
+            </Link>
+            <Button 
+              variant="outline" 
+              className="btn-outline btn-sm"
+              onClick={() => setIsWalletModalOpen(true)}
+            >
+              Подключить кошелек
+            </Button>
             <Link href="/payments/new">
               <Button className="btn-primary btn-sm">
                 Create Payment
@@ -39,6 +55,12 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      
+      {/* Wallet Connect Modal */}
+      <WalletConnectModal 
+        isOpen={isWalletModalOpen}
+        onClose={() => setIsWalletModalOpen(false)}
+      />
     </nav>
   );
 }
