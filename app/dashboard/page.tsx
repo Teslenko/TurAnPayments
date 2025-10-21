@@ -129,21 +129,21 @@ export default function DashboardPage() {
       {payments.length > 0 && (
         <div className="flex gap-2 mb-6">
           <Button
-            variant={filter === 'all' ? 'default' : 'outline'}
+            variant={filter === 'all' ? 'primary' : 'outline'}
             size="sm"
             onClick={() => setFilter('all')}
           >
             All ({payments.length})
           </Button>
           <Button
-            variant={filter === 'paid' ? 'default' : 'outline'}
+            variant={filter === 'paid' ? 'primary' : 'outline'}
             size="sm"
             onClick={() => setFilter('paid')}
           >
             Paid ({paidCount})
           </Button>
           <Button
-            variant={filter === 'pending' ? 'default' : 'outline'}
+            variant={filter === 'pending' ? 'primary' : 'outline'}
             size="sm"
             onClick={() => setFilter('pending')}
           >
