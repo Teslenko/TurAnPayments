@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
@@ -33,13 +33,7 @@ export default function PaymentDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (paymentId) {
-      fetchPayment();
-    }
-  }, [paymentId]);
-
-  const fetchPayment = async () => {
+  const fetchPayment = useCallback(async () => {
     try {
       const response = await fetch(`/api/payments/${paymentId}`);
       const data = await response.json();
@@ -55,7 +49,13 @@ export default function PaymentDetailsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [paymentId]);
+
+  useEffect(() => {
+    if (paymentId) {
+      fetchPayment();
+    }
+  }, [paymentId, fetchPayment]);
 
   const getStatusVariant = (status: string) => {
     switch (status) {

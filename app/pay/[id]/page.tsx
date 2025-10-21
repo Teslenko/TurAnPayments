@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -35,16 +35,7 @@ export default function PayPage() {
   const [error, setError] = useState<string | null>(null);
   const [userPaid, setUserPaid] = useState(false);
 
-  useEffect(() => {
-    if (paymentId) {
-      fetchPayment();
-      // Poll for updates every 10 seconds
-      const interval = setInterval(fetchPayment, 10000);
-      return () => clearInterval(interval);
-    }
-  }, [paymentId]);
-
-  const fetchPayment = async () => {
+  const fetchPayment = useCallback(async () => {
     try {
       const response = await fetch(`/api/payments/${paymentId}`);
       const data = await response.json();
@@ -60,7 +51,16 @@ export default function PayPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [paymentId]);
+
+  useEffect(() => {
+    if (paymentId) {
+      fetchPayment();
+      // Poll for updates every 10 seconds
+      const interval = setInterval(fetchPayment, 10000);
+      return () => clearInterval(interval);
+    }
+  }, [paymentId, fetchPayment]);
 
   const getStatusVariant = (status: string) => {
     switch (status) {
@@ -240,7 +240,7 @@ export default function PayPage() {
                 </Button>
                 {userPaid && (
                   <p className="text-sm text-green-600 mt-2">
-                    Thank you! We'll confirm your payment shortly.
+                    Thank you! We&apos;ll confirm your payment shortly.
                   </p>
                 )}
               </CardContent>
