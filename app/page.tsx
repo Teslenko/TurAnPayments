@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { StatsCard } from '@/components/ui/StatsCard';
 
 export default function HomePage() {
   return (
@@ -24,7 +25,43 @@ export default function HomePage() {
               Dashboard
             </Button>
           </Link>
+          <Link href="/how-to-pay">
+            <Button className="btn-outline btn-lg min-w-[160px]">
+              Как оплачивать
+            </Button>
+          </Link>
         </div>
+      </div>
+
+      {/* Statistics Section */}
+      <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-20">
+        <StatsCard
+          title="Всего платежей"
+          value="1,247"
+          description="За последний месяц"
+          icon={<span className="text-primary text-xl">💳</span>}
+          trend={{ value: "+12%", isPositive: true }}
+        />
+        <StatsCard
+          title="Объём транзакций"
+          value="$2.4M"
+          description="В криптовалюте"
+          icon={<span className="text-primary text-xl">💰</span>}
+          trend={{ value: "+8%", isPositive: true }}
+        />
+        <StatsCard
+          title="Активные пользователи"
+          value="3,891"
+          description="Уникальных кошельков"
+          icon={<span className="text-primary text-xl">👥</span>}
+          trend={{ value: "+15%", isPositive: true }}
+        />
+        <StatsCard
+          title="Средняя комиссия"
+          value="0.5%"
+          description="За обработку платежа"
+          icon={<span className="text-primary text-xl">⚡</span>}
+        />
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">

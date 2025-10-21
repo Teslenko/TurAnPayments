@@ -20,6 +20,11 @@ export function Navbar() {
                 Home
               </Button>
             </Link>
+            <Link href="/how-to-pay">
+              <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
+                Как оплачивать
+              </Button>
+            </Link>
             <Link href="/dashboard">
               <Button variant="ghost" className="btn-ghost btn-sm text-gray-900 dark:text-text">
                 Dashboard
