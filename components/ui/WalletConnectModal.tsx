@@ -12,6 +12,9 @@ interface WalletConnectModalProps {
 export function WalletConnectModal({ isOpen, onClose }: WalletConnectModalProps) {
   const [selectedWallet, setSelectedWallet] = useState<string | null>(null);
 
+  // Debug: log when modal is rendered
+  console.log('WalletConnectModal: isOpen =', isOpen);
+
   // Handle Escape key to close modal
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -33,7 +36,10 @@ export function WalletConnectModal({ isOpen, onClose }: WalletConnectModalProps)
   }, [isOpen, onClose]);
 
   // Don't render anything if modal is not open
-  if (!isOpen) return null;
+  if (!isOpen) {
+    console.log('WalletConnectModal: Not rendering because isOpen is false');
+    return null;
+  }
 
   const wallets = [
     {

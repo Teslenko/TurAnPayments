@@ -9,6 +9,9 @@ import { WalletConnectModal } from '@/components/ui/WalletConnectModal';
 export function Navbar() {
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
 
+  // Debug: log when modal state changes
+  console.log('Navbar: isWalletModalOpen =', isWalletModalOpen);
+
   return (
     <nav className="sticky top-0 z-40 bg-card/70 border-b border-border backdrop-blur-md">
       <div className="container">
