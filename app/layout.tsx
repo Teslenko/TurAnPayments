@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/ui/Navbar';
 import { ThemeProvider } from '@/components/theme-provider';
+import { VersionBadge } from '@/components/ui/VersionBadge';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,6 +45,7 @@ export default function RootLayout({
           <div className="page-wrap">
             <Navbar />
             {children}
+            <VersionBadge />
           </div>
         </ThemeProvider>
       </body>

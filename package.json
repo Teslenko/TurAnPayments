@@ -1,6 +1,6 @@
 {
   "name": "crypto-payment-gateway",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,8 @@
     "export": "next build && next export",
     "deploy": "npm run build",
     "postinstall": "prisma generate",
+    "version:bump": "node scripts/version.js",
+    "prepush": "npm run version:bump",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
     "prisma:studio": "prisma studio",
