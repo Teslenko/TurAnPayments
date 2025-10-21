@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="cryptoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#cryptoGradient)"/>
+  
+  <!-- Bitcoin-style symbol with payment arrow -->
+  <path d="M32 12 L32 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 16 L36 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M28 48 L36 48" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Currency symbol -->
+  <path d="M24 22 C24 22 24 20 28 20 L38 20 C42 20 42 24 42 26 C42 28 40 30 36 30 L28 30" 
+        stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 30 L38 30 C42 30 44 32 44 36 C44 40 42 42 38 42 L28 42 C24 42 24 40 24 40" 
+        stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Payment arrow accent -->
+  <circle cx="48" cy="48" r="9" fill="#10b981"/>
+  <path d="M44 48 L52 48 M52 48 L49 45 M52 48 L49 51" 
+        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
