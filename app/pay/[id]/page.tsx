@@ -9,7 +9,6 @@ import { QRCodeComponent } from '@/components/ui/QRCode';
 import { Timer } from '@/components/ui/Timer';
 import { Button } from '@/components/ui/Button';
 import { formatAmount } from '@/lib/crypto';
-import { Decimal } from '@prisma/client/runtime/library';
 
 interface Payment {
   id: string;
@@ -130,7 +129,7 @@ export default function PayPage() {
         <Card className="mb-6">
           <CardContent className="text-center py-8">
             <div className="text-4xl font-bold text-gray-900 mb-2">
-              {formatAmount(new Decimal(payment.amount), payment.asset)}
+              {formatAmount(payment.amount, payment.asset)}
             </div>
             <div className="text-lg text-gray-600 mb-4">
               {payment.chain.charAt(0).toUpperCase() + payment.chain.slice(1)} Network
@@ -208,7 +207,7 @@ export default function PayPage() {
                     <div>
                       <p className="font-medium">Send payment</p>
                       <p className="text-sm text-gray-600">
-                        Send exactly {formatAmount(new Decimal(payment.amount), payment.asset)} to the address above
+                        Send exactly {formatAmount(payment.amount, payment.asset)} to the address above
                       </p>
                     </div>
                   </div>

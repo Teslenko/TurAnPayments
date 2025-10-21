@@ -1,5 +1,4 @@
 import { ethers } from 'ethers';
-import { Decimal } from '@prisma/client/runtime/library';
 
 export interface ChainConfig {
   name: string;
@@ -124,21 +123,12 @@ export class PaymentTracker {
   }
 }
 
-export function formatAmount(amount: Decimal, asset: string): string {
-  const value = amount.toNumber();
+export function formatAmount(amount: number | { toNumber: () => number }, asset: string): string {
+  const value = typeof amount === 'number' ? amount : amount.toNumber();
   if (asset === 'ETH') {
     return `${ethers.formatEther(value.toString())} ETH`;
   } else if (asset === 'USDT') {
     return `${value.toFixed(2)} USDT`;
   }
   return `${value} ${asset}`;
-}
-
-export function calculateFee(amount: Decimal, feePct: number): Decimal {
-  return amount.mul(feePct / 100);
-}
-
-export function calculateTotal(amount: Decimal, feePct: number): Decimal {
-  const fee = calculateFee(amount, feePct);
-  return amount.add(fee);
 }

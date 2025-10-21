@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: '/TurAnPayments',
-  assetPrefix: '/TurAnPayments/',
-  images: {
-    unoptimized: true
-  },
   experimental: {
-    serverComponentsExternalPackages: ['@prisma/client']
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma']
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push({
+        '@prisma/client': 'commonjs @prisma/client',
+      });
+    }
+    return config;
   }
 }
 

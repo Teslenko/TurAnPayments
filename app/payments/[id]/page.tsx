@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/Badge';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { Button } from '@/components/ui/Button';
 import { formatAmount } from '@/lib/crypto';
-import { Decimal } from '@prisma/client/runtime/library';
 
 interface Payment {
   id: string;
@@ -127,7 +126,7 @@ export default function PaymentDetailsPage() {
               <div>
                 <label className="text-sm font-medium text-gray-500">Amount</label>
                 <p className="text-lg font-semibold">
-                  {formatAmount(new Decimal(payment.amount), payment.asset)}
+                  {formatAmount(payment.amount, payment.asset)}
                 </p>
               </div>
               
